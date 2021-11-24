@@ -223,6 +223,11 @@ iframe {
 
 		a {
 			margin-left: 2em;
+
+			&:hover {
+				color: red;
+				font-weight: bold;
+			}
 		}
 	}
 
@@ -244,7 +249,7 @@ nav {
 	right: 0;
 	top: 0;
 	background: #20272e;
-	height: 50vh;
+	height: 80vh;
 	padding: 1em;
 
 	ul.primary-nav {
@@ -336,6 +341,14 @@ nav {
 			}
 		}
 	}
+
+	.footer {
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }
 
 @media only screen and (min-width: 1080px) {
@@ -373,5 +386,67 @@ nav {
 	}
 	.primary-btn {
 		margin-right: 1em;
+	}
+
+	ul.features-list {
+		display: block;
+		margin-left: 5em;
+
+		li {
+			font-size: 1.4em;
+
+			&:before {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	.features-section {
+		position: relative;
+
+		img {
+			display: block;
+			position: absolute;
+			right: 0;
+			width: 400px;
+			bottom: -2.5em;
+		}
+	}
+
+	.testimonials-section ul {
+		display: flex;
+
+		li {
+			margin: 0 1em;
+		}
+	}
+
+	.contact-section {
+		position: relative;
+
+		.container {
+			display: flex;
+		}
+	}
+
+	.contact-right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 45%;
+		height: 100%;
+
+		iframe {
+			height: 100%;
+		}
+	}
+
+	.footer {
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 }
