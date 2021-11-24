@@ -101,10 +101,11 @@ section {
 	color: #fff;
 }
 
-.ul.features-list {
+ul.features-list {
 	margin: 0;
 	padding: 0.1em;
-	// come back later
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(19rem, ifr));
 
 	li {
 		font-size: 1.1em;
@@ -271,4 +272,106 @@ nav {
 	float: right;
 	margin: 0.5em;
 	cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+	.mobile-menu,
+	.mobile-menu-exit {
+		display: none;
+	}
+
+	.navbar .container {
+		display: flex;
+	}
+
+	.navbar nav {
+		display: flex;
+		justify-content: space-between;
+		background: none;
+		position: unset;
+		height: auto;
+		width: 100%;
+		padding: 0;
+
+		ul {
+			display: flex;
+		}
+
+		a {
+			color: #000;
+			font-size: 1em;
+			padding: 0.2em 0.2em;
+		}
+
+		ul.primary-nav {
+			margin: 0 2em;
+
+			a {
+				margin-left: 1.2em;
+			}
+		}
+		ul.secondary-nav {
+			a {
+				margin-left: 1.2em;
+			}
+		}
+
+		li.current a {
+			font-weight: bold;
+		}
+
+		li.go-premium-btn a {
+			background: #fff;
+			color: red;
+			border: 2px solid red;
+			border-radius: 5em;
+			font-weight: bold;
+			padding: 0.5em 1em;
+			margin-top: -0.35em;
+
+			&:hover {
+				background: red;
+				color: #fff;
+				border: 2px solid #fff;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	section {
+		padding: 10em 4em;
+	}
+
+	.hero-section .container {
+		display: flex;
+		justify-content: space-between;
+		text-align: left;
+
+		.left-col {
+			margin: 3em 3em 0 5em;
+
+			h1 {
+				font-size: 3em;
+				width: 90%;
+			}
+		}
+	}
+
+	.hero-img {
+		width: 100%;
+		margin-right: 8em;
+	}
+
+	.hero-cta {
+		display: flex;
+	}
+	.primary-btn {
+		margin-right: 1em;
+	}
 }
